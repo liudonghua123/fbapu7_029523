@@ -1,0 +1,35 @@
+To change default skin:
+You need to create a BMP file of 32 bit deph and 304x224 size
+
+Then you need to make the following in fbap.ini in the config folder.
+
+Is important that you make a backup of your ini before editing, so if you make a mistake
+you can restore easily your settings.
+
+Instalation
+
+1.- Make a fbap.ini backup
+2.- Place any image that matches the requirements above in the skins folder of FB Alpha
+Plus!
+3.- Open fbap.ini and edit the following lines:
+
+FIND: -----------------------------============================================ 
+
+// The filename of the placeholder image to use (empty filename = use built-in) 
+szPlaceHolder 
+
+------------------------------------------------------------------------------- 
+
+4.- Replace that lines with this, in where "filename" is the BMP name:
+
+REPLACE WITH: ---------------------=========================================== 
+
+// The filename of the placeholder image to use (empty filename = use built-in) 
+szPlaceHolder skins/filename.bmp 
+
+------------------------------------------------------------------------------- 
+
+5.- Save changes and close
+6.- Restart FB Alpha Plus! and get marveled with your art! XD
+
+END

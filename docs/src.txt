@@ -1,0 +1,21 @@
+Editing the src of FB Alpha Plus!
+
+Well this is a short readme, but maybe it will be helpfull, this is intended to show
+how to modify this src.
+
+First of all you need to be somewhat familiar with C/C++, because this emulator is
+coded with those languages, then you need a text editor such as Notepad, WordPad, MetaPad,
+etc...
+Anyway I personally recomend 2 editors, that are very stable and have extra features, like
+Ultra-Edit 32 or Dev C++, they can be found on http://www.google.com (you must look for
+them), they have sintax highlighting, text autoindent and a lot of extra features that
+make src editting easier.
+
+Then the final, I recomend to make a backup before editing the src, so if you do something
+wrong you can restore your old files.
+
+If you need help coding in FB Alpha Plus! you can visit:
+http://neosource.1emulation.com/forums/
+On this comunity, you surely can get all the help you need.
+
+Have fun!!!

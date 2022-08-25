@@ -1,0 +1,142 @@
+---------------------------------------------------------------------
+                     Input Macro driver  v0.5
+
+                         written by Gangta
+                       gangtakun@hotmail.com
+		     ported and fixed by emufan
+---------------------------------------------------------------------
+
+Credits:
+
+ - HyperYagami: External file support is based on his cheat engine
+ - Jyaku: For online/offline testing and reporting bugs
+ - Mr K aka MHz: Ideas of input macro came from Kawaks input macro
+ - Emufan: For porting the original FBA Combo source. 
+
+---------------------------------------------------------------------
+
+Version History:
+
+ v0.1  - Primitive input macro
+         Each macro is hard coded into the game driver
+ v0.2  - Intput macro can be disabled or enabled
+       - Added more input macro types (normal, auto, block)
+ v0.3  - External macro support based on HyerYagami's cheat engine.
+         Write your own input macro for each game:)
+ v0.4  - Added some shortcut moves and ~xx for holding xx frames
+         Switched the style similar to Kawaks macro
+ v0.4a - Fixed weird crash bug (thanks to Jyaku for testing)
+ v0.5  - Increased macro capacity and fixed some minor bugs (made
+         by emufan).
+
+---------------------------------------------------------------------
+
+How to edit a macro:
+
+ Edit the macros.dat with Notepad.
+ macros.dat must be in config\macros folder the FBA direcotry.
+
+---------------------------------------------------------------------
+
+Rules for input macro:
+
+ combo type : game zip name : combo move : combo name
+
+---------------------------------------------------------------------
+
+Valid combo types:
+
+  a - autofilre
+  b - block other input until combo finishes
+  n - normal
+  e - not a combo, used to specify clones (i.e. e:sf2u:sf2)
+
+--------------------------------------------------------------------
+
+Valid short cut moves:
+
+  (+360) -         clockwise 270 motion
+  (-360) - counter clockwise 270 motion
+  (+720) -         clockwise 630 motion
+  (-720) - counter clockwise 630 motion
+  (+DRG) - forward dragon punch motion
+  (-DRG) - reverse dragon punch motion
+  (HCF)  - half circle forward motion
+  (HCB)  - half circle back motion
+  (QCF)  - quarter circle forward motion
+  (QCB)  - quarter circle back motion
+
+--------------------------------------------------------------------
+
+Valid keys
+
+   U   - up
+   D   - down
+   L   - left
+   R   - right
+   ,   - next frame
+   1   - button 1
+   2   - button 2
+   3   - button 3
+   4   - button 4
+   5   - button 5
+   6   - button 6
+   ~xx - hold this for xx frames
+
+-------------------------------------------------------------------- 
+
+Examples:
+
+ // forward dragon motion, weak punch
+ b:sfa:R,D,DR,1:whatever
+ b:sfa:(+DRG),1:whatever      <----------------------------- alternative
+
+ // clockwise 360, fierce punch
+ b:mvsc:R,RD,D,DL,L,LU,U,2:whatever
+ b:mvsc:(+360),2:whatever     <----------------------------- alternative
+
+ // Xmen Vs SF Wolvarine 9 hit combo (dash towards right before this)
+ b:xmvsf:1,D~10,D4,D~15,D2,~10,6,RU~30,1,~10,4,~10,2,~10,5,~10,3:whatever
+
+ // Simple 3 button macro for The King of Fighters ´99
+ b:kof99:123:whatever
+
+ // Iori's Maiden crusher macro (after Maiden masher)
+ b:kof2001:(QCF),(QCF),(QCF),(QCF),13:whatever
+ b:kof2001:D,DF,F,D,DF,F,D,DF,F,D,DF,F,13:whatever	<--- alternative
+
+ // Autofire for Metal slug series (hold for 3 frames within a shot)
+ a:mslug3:1~3:whatever
+
+--------------------------------------------------------------------
+
+Hints and Information:
+
+ - A maximum of 1270 characters can be used for each input macro.
+ - Each input macro can be named by maximum of 40 characters.
+ - You can add a maximum of 100 macros / player
+   (F.EX: If 2 Players = 50 x Player, if 4 players = 25 x Player)
+ - Input macro feature can be enabled or disabled from FB Alpha
+   Plus! -> Misc menu, or by directly editing fbapa.ini in the
+   /config/ directory.
+ - Input macro can only be enabled or disabled before you start
+   a game and after unloading (F6) a game.
+ - Some motions just work for the side are intended to be, if for
+   example you have a (QCF),3 motion, it won't work properly if
+   you see to your left, that's the reason why some macros are for
+   (Right) and (Left).
+
+NOTE FOR KAILLERA PLAYERS:
+ ******************** Game will desync if: ************************
+
+ 1. You are playing someone with official build,
+    and you have input macro enabled.
+ 2. You are playing someone with this build,
+    but one has macro enabled; the other, disabled.
+ 3. Both have macro enabled, but they do not
+    have the same macro for the game
+
+ * For a better Kaillera playing, is better NOT TO ENABLE this
+   feature, is intended only for those players that aren't very
+   confortable with keyboard, this isn't designed for internet
+   playing due the problems it can exibit.
